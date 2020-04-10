@@ -5,7 +5,7 @@ A privacy preserving protocol for contact tracing
 
 ## Status
 
-Deprecated in favor of other simpler protocols that offer more privacy
+Other simpler protocols offer more privacy
 
 - [PACT](https://pact.mit.edu/wp-content/uploads/2020/04/The-PACT-protocol-specification-ver-0.1.pdf)
 
@@ -16,15 +16,20 @@ Deprecated in favor of other simpler protocols that offer more privacy
 - **Broadcast Integrity** Users cannot broadcast CENs they did not generate.
 - **No Passive Tracking** A passive adversary monitoring Bluetooth connections should not be able to learn any information about the location of users who do not send reports.
 - **Receiver Privacy** Users who receive reports do not reveal information to anyone.
-- **Reporter Privacy** Users who send reports do not reveal information to users they did not come in contact with, and reveal only the time of contact to users they did come in contact with. Note that in practice, the timing alone may still be sufficient for their contact to learn their identity (e.g., if their contact was only around one other person at the time).
+- **Reporter Privacy** Users who send reports do not reveal information to users they did not come in contact with, and reveal only the time of contact to users they did come in contact with.
 
 |Property                | PACT | FMCEN
 |------------------------|------|--------|
+|**Compatible with FindMy**|🟡  | ✅    |
 |**Server Privacy**      | ✅   | ❌ Server learns contacts that have proximity for over x days |
 |**Source Integrity**    | ✅   | ✅    |
 |**Broadcast Integrity** | ✅   | 🟡 Could be prevented with 64 bytes for a signature |
 |**No Passive Tracking** | ✅   | ✅    |
 |**Receiver Privacy**    | ✅   | 🟡 Users reveal the k anonymity of contact matches |  
 |**Reporter Privacy**    | ❌   | ✅    |
-|**Compatible with FindMy**|✅  | ✅    |
+| - **Private Health Records**| ❌ | ✅  |
+| - **Private Location History**| ❌ | ✅|
+
+
+
 
